@@ -1,0 +1,63 @@
+.buttons {
+    -fx-background-color: white;
+    -fx-border-color: #569AFF;
+    -fx-border-width: 2;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+}
+
+.inputs {
+    -fx-background-color: white;
+    -fx-border-color: #569AFF;
+    -fx-border-width: 2;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+}
+
+.choisebox {
+    -fx-font: 14px "VK Sans Display Medium"
+}
+
+.choisebox .context-menu {
+    -fx-pref-width: 150;
+    -fx-background-color: white;
+    -fx-border-color: #569AFF;
+    -fx-border-width: 2;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-padding: 0
+}
+
+.choisebox .menu-item:hover, .choisebox .menu-item:focused, .choisebox .menu-item:pressed {
+    -fx-background-color: #569AFF;
+    -fx-background-radius: 10;
+}
+
+.checkbox .box {
+    -fx-background-color: white;
+    -fx-border-color: #569AFF;
+    -fx-border-radius: 4;
+    -fx-border-width: 2;
+    -fx-background-radius: 4;
+}
+
+.checkbox:selected .mark {
+    -fx-background-color: white;
+}
+
+.checkbox:selected .box {
+    -fx-background-color: #569AFF;
+}
+
+#control-scroll {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-border-color: #569AFF;
+    -fx-border-radius: 10;
+    -fx-border-width: 2;
+}
+
+#control-scroll .viewport {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+}

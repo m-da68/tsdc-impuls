@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="235.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.tsconnect.tsdcimpuls.MainController">
+   <left>
+      <GridPane prefHeight="1387.0" prefWidth="231.0" style="-fx-background-color: white; -fx-border-color: #569AFF; -fx-border-width: 0 2 0 0;" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="105.60000305175781" minHeight="0.0" prefHeight="105.60000305175781" valignment="TOP" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <BorderPane fx:id="logo_bp" prefHeight="200.0" prefWidth="200.0">
+               <center>
+                   <ImageView fitHeight="87.0" fitWidth="207.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                       <Image url="@logo_invert.png" />
+                   </ImageView>
+               </center>
+               <cursor>
+                  <Cursor fx:constant="MOVE" />
+               </cursor>
+            </BorderPane>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="219.0" prefWidth="519.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane fx:id="panePorts" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0">
+               <children>
+                  <HBox alignment="CENTER_RIGHT" layoutX="222.0" layoutY="382.0" spacing="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+                     <children>
+                        <Button fx:id="btnSettingsSave" alignment="TOP_CENTER" cache="true" contentDisplay="CENTER" mnemonicParsing="false" onAction="#savePortSettings" prefHeight="20.0" prefWidth="140.0" styleClass="buttons" stylesheets="@style.css" text="Подключение" textAlignment="CENTER">
+                           <font>
+                              <Font name="VK Sans Display Medium" size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <GridPane layoutX="30.0" layoutY="-33.0" prefHeight="166.0" prefWidth="458.0" vgap="10.0" AnchorPane.leftAnchor="30.0">
+                     <columnConstraints>
+                        <ColumnConstraints fillWidth="false" halignment="LEFT" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="92.3999755859375" />
+                        <ColumnConstraints fillWidth="false" halignment="LEFT" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="154.00002441406247" />
+                        <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="108.79998779296875" />
+                        <ColumnConstraints fillWidth="false" halignment="LEFT" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="130.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="COM порт:">
+                           <font>
+                              <Font name="VK Sans Display Medium" size="14.0" />
+                           </font>
+                        </Text>
+                        <ChoiceBox fx:id="settingsFieldCom" prefWidth="150.0" stylesheets="@style.css" GridPane.columnIndex="1">
+                           <styleClass>
+                              <String fx:value="inputs" />
+                              <String fx:value="choisebox" />
+                           </styleClass>
+                        </ChoiceBox>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="mkR/h:" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="VK Sans Display Medium" size="18.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="mkSv/h:" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="VK Sans Display Medium" size="18.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="mkrh" strokeType="OUTSIDE" strokeWidth="0.0" text="wait" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="VK Sans Display Medium" size="18.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="mksvh" strokeType="OUTSIDE" strokeWidth="0.0" text="wait" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="VK Sans Display Medium" size="18.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+            <ButtonBar fx:id="navBtns" buttonMinWidth="0.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="12.0">
+               <buttons>
+                  <Circle fx:id="btnFullScreen" fill="#569aff" onMouseClicked="#fullScreen" radius="10.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Circle>
+                  <Circle fx:id="btnClose" fill="RED" onMouseClicked="#close" radius="10.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Circle>
+               </buttons>
+            </ButtonBar>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
